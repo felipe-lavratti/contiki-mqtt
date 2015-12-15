@@ -29,14 +29,13 @@ I have done fixes and increments on the original code, including:
 
 - Added support for QOS1 and QOS2 messaging (as long broker is configured 
   with `max_inflight_messages = 1`)
-- Created "mode2" publish interace, used to fill the transmission buffer 
+- Created "mode2" publish interface, used to fill the transmission buffer 
   with a callback.
 
 Only two fixes worth mentioning:
 
-- Fixed a connec case where auto reconnect would stop retring
+- Fixed a connect case where auto reconnect would stop retrying
 - Fixed TCP data handling methodology: Now received buffer is considered byte
-  a byte instead of expectecting that a full and single mqtt packet will be 
-  received by each read call. In TCP packets might get joined togheter by the 
+  a byte instead of expecting that a full and single MQTT packet will be 
+  received by each read call. In TCP packets might get joined together by the 
   sender.
-
